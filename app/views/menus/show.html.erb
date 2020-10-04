@@ -1,0 +1,31 @@
+<div class="container col-5 mt-5">
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>メニュー</th>
+      		<th>作り方</th>
+      		<th></th>
+      		<th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><%= @menu.title %></td>
+   			<td><%= @menu.body %></td>
+   			<td>
+          <button type="button" class="btn btn-dark "><%= link_to "戻る", menus_path %>
+          </button>
+    </td>
+    <td>
+    	<button type="button" class="btn btn-danger"><%= link_to "削除", menu_path(@menu.id), method: :delete, data: { confirm: '本当に削除しますか？'} %>
+          </button>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+
+	

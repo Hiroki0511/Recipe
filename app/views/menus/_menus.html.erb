@@ -1,0 +1,13 @@
+<% menus.each do |menu| %>
+<div class="card mt-1">
+	<div class="card-body">
+		<p class="card-text"><%= menu.title %></p>
+		<p class="card-text"><small><%= simple_format menu.body %></small></p>
+<div class="text-right">
+		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+			<%= link_to "詳しく", menu_path(menu.id)%>
+		</button>
+	</div>
+	</div>
+</div>
+<% end %>
